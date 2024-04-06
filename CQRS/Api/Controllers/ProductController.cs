@@ -3,11 +3,13 @@ using Application.Models.RequestModel;
 using Application.Models.ViewModel;
 using Application.Query;
 using MediatR;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
 {
+    [EnableCors("myCors")]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase

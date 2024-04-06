@@ -17,7 +17,12 @@ namespace Api
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddApplication().AddDataAccess();
-            
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("myCors", builder => builder.AllowAnyOrigin()
+                                                              .AllowAnyMethod()
+                                                              .AllowAnyHeader());
+            });
 
 
             var app = builder.Build();
@@ -31,6 +36,7 @@ namespace Api
 
             app.UseHttpsRedirection();
 
+            app.UseCors("myCors");
             app.UseAuthorization();
 
 
