@@ -1,0 +1,38 @@
+﻿@page "/products";
+@model RazorPages.Pages.ViewPersonModel
+@using RazorPages.Model
+@{
+    ViewData["Title"] = "View Product";
+}
+
+<h2>All Product</h2>
+
+<p class="text-end">
+    <a href="/add" class="p-2"> Add Product </a>
+    <a href="/" class="p-2"> Home </a>
+</p>
+
+
+<table class="w-100 table-responsive-lg p-2">
+    <thead >
+        <th> Name </th>
+        <th> Price </th>
+    </thead>
+    <tbody >
+        @foreach (Product product in Model.products)
+        {
+            <tr>
+                <td> @product.Name </td>
+                <td> @product.Price </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (Model.isEmpty)
+{
+    <p class="alert-danger">Unable to fetch product right now try later</p>
+}
+
+
+
