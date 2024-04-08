@@ -64,3 +64,7 @@ public class AddProductHandler : IRequestHandler<AddProductCommand, ProductRespo
 - Exposes endpoints for external interaction (e.g., REST API) to receive commands and queries.
 
 ## CQRS Pattern Diagram
+
+## Razor Pages ( UI )
+
+- The Ui for adding and getting products is build in razor pages using ASP.NET Web API
