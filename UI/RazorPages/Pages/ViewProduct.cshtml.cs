@@ -1,11 +1,14 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorPages.Model;
 
 namespace RazorPages.Pages
 {
+    [Authorize]
     public class ViewPersonModel : PageModel
     {
+
         public List<Product> products { get; set; }
         public bool isEmpty { get; set; }
         private readonly HttpClient _httpClient;
