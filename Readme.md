@@ -67,4 +67,12 @@ public class AddProductHandler : IRequestHandler<AddProductCommand, ProductRespo
 
 ## Razor Pages ( UI )
 
-- The Ui for adding and getting products is build in razor pages using ASP.NET Web API
+- The UI for adding and getting products is built in razor pages using ASP.NET Web API
+
+## Cookie Based Authentication
+
+- Only authenticated users can able to access or add product
+- Cookie will have claim and identity about the user
+
+
+
